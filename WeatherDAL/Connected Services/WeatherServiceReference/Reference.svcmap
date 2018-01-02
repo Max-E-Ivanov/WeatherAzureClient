@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1d6c26fb-839f-4cc1-8a9b-d0279391c745" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address=" http://azurewcf.cloudapp.net/WeatherService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WeatherService.xsd" MetadataType="Schema" ID="2230c2cc-ae06-44e3-a4e5-588a0a094894" SourceId="1" SourceUrl="http://azurewcf.cloudapp.net/WeatherService.svc?xsd=xsd0" />
+    <MetadataFile FileName="WeatherService1.xsd" MetadataType="Schema" ID="9b4ee8e9-b912-4a4d-ad57-9a3657c8b358" SourceId="1" SourceUrl="http://azurewcf.cloudapp.net/WeatherService.svc?xsd=xsd1" />
+    <MetadataFile FileName="WeatherService.disco" MetadataType="Disco" ID="625bf22d-f6f0-4e26-9e68-0859db02e41d" SourceId="1" SourceUrl="http://azurewcf.cloudapp.net/WeatherService.svc?disco" />
+    <MetadataFile FileName="WeatherService2.xsd" MetadataType="Schema" ID="9126ee65-fc10-4d54-9739-52a4e87ad418" SourceId="1" SourceUrl="http://azurewcf.cloudapp.net/WeatherService.svc?xsd=xsd2" />
+    <MetadataFile FileName="WeatherService.wsdl" MetadataType="Wsdl" ID="b5b2c543-8863-4910-bf26-145ce8c62ae0" SourceId="1" SourceUrl="http://azurewcf.cloudapp.net/WeatherService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

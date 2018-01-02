@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WeatherWCFServiceWebRole" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WeatherWCFServiceWebRole" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="WeatherDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UV" type="xs:double" />
+      <xs:element minOccurs="0" name="feelslike_c" type="xs:double" />
+      <xs:element minOccurs="0" name="feelslike_f" type="xs:double" />
+      <xs:element minOccurs="0" name="icon_url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="local_time_rfc822" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="observation_location" nillable="true" type="tns:Location" />
+      <xs:element minOccurs="0" name="observation_time" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="observation_time_rfc822" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pressure_mb" type="xs:double" />
+      <xs:element minOccurs="0" name="relative_humidity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="solarradiation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="temp_c" type="xs:double" />
+      <xs:element minOccurs="0" name="temp_f" type="xs:double" />
+      <xs:element minOccurs="0" name="visibility_km" type="xs:double" />
+      <xs:element minOccurs="0" name="visibility_mi" type="xs:double" />
+      <xs:element minOccurs="0" name="weather" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="wind_dir" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="wind_kph" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WeatherDetails" nillable="true" type="tns:WeatherDetails" />
+  <xs:complexType name="Location">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="city" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="elevation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="latitude" type="xs:double" />
+      <xs:element minOccurs="0" name="longitude" type="xs:double" />
+      <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Location" nillable="true" type="tns:Location" />
+  <xs:complexType name="AlmanacDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="airport_code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="temp_high" nillable="true" type="tns:AlmanacRecord" />
+      <xs:element minOccurs="0" name="temp_low" nillable="true" type="tns:AlmanacRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AlmanacDetails" nillable="true" type="tns:AlmanacDetails" />
+  <xs:complexType name="AlmanacRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="normal" nillable="true" type="tns:Record" />
+      <xs:element minOccurs="0" name="record" nillable="true" type="tns:Record" />
+      <xs:element minOccurs="0" name="recordyear" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AlmanacRecord" nillable="true" type="tns:AlmanacRecord" />
+  <xs:complexType name="Record">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="C" type="xs:double" />
+      <xs:element minOccurs="0" name="F" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Record" nillable="true" type="tns:Record" />
+</xs:schema>

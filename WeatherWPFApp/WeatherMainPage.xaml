@@ -1,0 +1,30 @@
+﻿<Page x:Class="Weather.Pages.WeatherMainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:p="clr-namespace:WeatherWPFApp.Properties"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Weather.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="337.302" d:DesignWidth="583.492"
+      Title="{x:Static p:Resources.AppTitle}"
+      WindowTitle="{x:Static p:Resources.AppTitle}">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <TextBlock Text="{x:Static p:Resources.CountryLabel}"></TextBlock>
+            <ComboBox MinWidth="100" IsEditable="True" Text="{Binding Path=SelectedCountry, UpdateSourceTrigger=LostFocus}"></ComboBox>
+            <TextBlock Text="{x:Static p:Resources.CityLabel}"></TextBlock>
+            <ComboBox MinWidth="100" IsEditable="True"  Text="{Binding Path=SelectedCity, UpdateSourceTrigger=LostFocus}"></ComboBox>
+            <TextBlock Text="{x:Static p:Resources.CityCoordinates}"></TextBlock>
+            <TextBlock Text="{Binding Path=CityCoordinates}"></TextBlock>
+        </StackPanel>
+        <TabControl>
+            <TabItem Header="{x:Static p:Resources.CurrentTab}">
+                <local:WeatherCurrentUC DataContext="{Binding weatherCurrentVM}" />
+            </TabItem>
+            <TabItem Header="{x:Static p:Resources.HourlyTab}"></TabItem>
+            <TabItem Header="{x:Static p:Resources.ForecastTab}"></TabItem>
+            <TabItem Header="{x:Static p:Resources.MoonTab}"></TabItem>
+        </TabControl>
+    </DockPanel>
+</Page>

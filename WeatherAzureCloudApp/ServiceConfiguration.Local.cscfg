@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="WeatherAzureCloudApp" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="5" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="WeatherAppWebRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="a644c578-dc04-4487-a806-8a63d8316bbc" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="max" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEHZhsqonjKOpQNI5H5nhnkIwDQYJKoZIhvcNAQEBBQAEggEAZD2DWKZk4+zO/RI6uRB1aOhH+CKmY+ynUypQNwt3TkgN1t3uCZmTO54HFGAIIHn221V1IdyBjXbN+8LPurOEHq69yI9vzv74Q8cOe7crXD1ZdOXAwjzamn4qlKl/Igbbihq3ZYLLsm8YZl0WnugO2bEo2V1m3MGbTqUaUiNlIBiEB+J/jbon55098UkMMVVOpOXO7c7nIkfcJhshd76rG60JSfr6He5dlW96dOrXNTF+ESOtZqRnYCIuuJulAhFpw/0GG9iBerMX8y0+yzWLuKkPsLyzc9pliGNGLYPywwldctgfgv8i0hjmqbpCyuec3/CNbZrnZOHO9aiqWP11kjAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECPe0YecqwDoWgBBHoTwOC/239UQOKDCn79YM" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2018-12-27T23:59:59.0000000+02:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="2E9B33C825E446D4A99BB0026718051A91A92D15" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>
