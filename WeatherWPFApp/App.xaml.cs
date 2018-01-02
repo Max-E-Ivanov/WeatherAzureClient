@@ -31,13 +31,13 @@ namespace WeatherWPFApp
                      XmlLanguage.GetLanguage(
                      CultureInfo.CurrentCulture.IetfLanguageTag)));*/
 
-            FrameworkElement.LanguageProperty.OverrideMetadata(
+         /*   FrameworkElement.LanguageProperty.OverrideMetadata(
                  typeof(FrameworkElement),
                  new FrameworkPropertyMetadata(
                      XmlLanguage.GetLanguage(
                      "ru-RU")));
             System.Threading.Thread.CurrentThread.CurrentUICulture =
-            new System.Globalization.CultureInfo("uk-UA");
+            new System.Globalization.CultureInfo("uk-UA");*/
 
 
             // Кто у нас будет предоставлять погоду и методы визуального интерфейса
